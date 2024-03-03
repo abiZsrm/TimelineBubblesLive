@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { ContainerStyle } from './style.module.css'
 import CommentedBubble from './molecules/commented_bubble'
 import HorizontalLine from './atoms/horizontal_line'
-
+import ReactDOM from "react-dom";
 /**
  * Stores all bubbles inside of it and aligns them
  * @param {Object} props 

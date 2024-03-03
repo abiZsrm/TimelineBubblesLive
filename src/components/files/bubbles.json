@@ -1,0 +1,27 @@
+{
+    "theme": {
+        "primary": "#ffffff",
+        "accent": "#212529",
+        "isPrinting": false
+    },
+    "bubbles": [
+        {
+            "identifier": 1709398823431,
+            "title": "2024",
+            "isImage": false,
+            "comment": "&nbsp;When you tried a new tool!&nbsp;<br>by nickolasrm"
+        },
+        {
+            "identifier": 1709398825832,
+            "title": "2025",
+            "isImage": false,
+            "comment": "super"
+        },
+        {
+            "identifier": 1709398833832,
+            "title": "2026",
+            "isImage": false,
+            "comment": "Rangag"
+        }
+    ]
+}

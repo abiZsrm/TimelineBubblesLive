@@ -66,16 +66,16 @@ export default function Comment(props) {
 				<div ref={textareaRef}
 					className={TextareaStyle}
 					data-testid="comment_textarea"
-					// onInput={handleTextChange}
-					contentEditable={false}
+					onInput={handleTextChange}
+					contentEditable={true}
 					spellCheck={false}
 					role="textbox"></div> :
 				<img src={image} className={ImageStyle}
 					data-testid="comment_image"
 					alt="Bubble"></img>
 			}
-			{/* <CommentImageButton onImageSelected={setImage} image={image}
-				className={HoveringButtonsStyle}></CommentImageButton> */}
+			<CommentImageButton onImageSelected={setImage} image={image}
+				className={HoveringButtonsStyle}></CommentImageButton>
 		</div>
 	)
 }

@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
 import { ContainerStyle } from './style.module.css'
-import { KEY_BACK_SPACE, KEY_RETURN, KEY_SHIFT } from 'keycode-js'
 
 /**
  * A bubble is a circular object displayed with a text in it
@@ -32,21 +31,7 @@ export default function Bubble(props) {
 		handleChange()
 	}, [title])
 
-	/**
-	 * Removes or adds bubbles depending on the key pressed
-	 * @param {Object} event 
-	 */
-	function handleKeyDown(ev)
-	{
-		setLastKey(ev.keyCode)
-		// If backspace and input is empty, then remove
-		if (ev.keyCode === KEY_BACK_SPACE && 
-			inputRef.current.innerHTML === "")
-			props?.removeBubble(props.identifier)
-		// If the user press the return key, then create a new bubble
-		else if(lastKey !== KEY_SHIFT && ev.keyCode === KEY_RETURN)
-			props?.addBubble(props.identifier)
-	}
+	
 
 	/**
 	 * Updates the bubble content
@@ -72,6 +57,5 @@ export default function Bubble(props) {
 			data-testid="bubble"
 			contentEditable={false}
 			onInput={handleChange}
-			onKeyDown={handleKeyDown}
 			spellCheck={false}></div>)
 }

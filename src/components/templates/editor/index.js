@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from 'react'
+import oracleBadge from '../../../components/files/awsAssociateDeveloper.png'
 import Bubbles from '../../organisms/bubbles'
 import CSSConfigurator from '../../organisms/css_configurator'
-import TutorialButton from '../../organisms/routes/molecules/tutorial_button'
 import Title from '../../organisms/title'
-import Toolbar from '../../organisms/toolbar'
 import { ContainerStyle } from './style.module.css'
-import jsonData from '../../../components/files/bubbles.json';
-import oracleBadge from '../../../components/files/awsAssociateDeveloper.png'; 
 /**
  * Template app editor
  * @returns 
@@ -66,14 +63,11 @@ export default function TemplateEditor()
 	
 	useEffect(() => {
 		handleFileOpened(randomJson); 
-		}, [bubbles]); 
+		}, []); 
 
 	return (<main id="toPrint" className={ContainerStyle}>
 				<CSSConfigurator theme={theme}></CSSConfigurator>
 				<Title isAnimated={true}></Title>
 				<Bubbles bubbles={bubbles} setBubbles={setBubbles}></Bubbles>
-				<Toolbar bubbles={bubbles} setBubbles={setBubbles}
-					theme={theme} setTheme={setTheme}></Toolbar>
-				<TutorialButton></TutorialButton>
 			</main>)
 }
