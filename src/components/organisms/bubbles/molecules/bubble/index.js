@@ -70,7 +70,7 @@ export default function Bubble(props) {
 		<div ref={inputRef} 
 			className={'disable-anim ' + ContainerStyle}
 			data-testid="bubble"
-			contentEditable={true}
+			contentEditable={false}
 			onInput={handleChange}
 			onKeyDown={handleKeyDown}
 			spellCheck={false}></div>)
